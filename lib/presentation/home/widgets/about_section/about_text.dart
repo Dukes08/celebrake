@@ -17,6 +17,7 @@ class AboutText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     const Color grey = Color(0xFFAEAEB2);
     const Color white = Colors.white;
 
@@ -31,7 +32,7 @@ class AboutText extends StatelessWidget {
 
             const SizedBox(width: 8),
             SizedBox(
-              width: 331,
+              width: size.width * 0.8,
               child: RichText(
                 text: TextSpan(
                   style: const TextStyle(fontSize: 17, height: 1.4),
