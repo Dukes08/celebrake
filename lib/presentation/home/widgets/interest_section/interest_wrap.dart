@@ -33,7 +33,16 @@ class _InterestsWrapState extends State<InterestsWrap> {
           children: [
             ...visible.map((txt) => InterestContainer(label: txt)),
             if (!_expanded && needsToggle)
-              InterestContainer(label: '+$hiddenCount'),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 8.0,
+                  horizontal: 4,
+                ),
+                child: Text(
+                  '+$hiddenCount',
+                  style: const TextStyle(color: Colors.white, fontSize: 14),
+                ),
+              ),
           ],
         ),
 

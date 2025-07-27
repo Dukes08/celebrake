@@ -23,43 +23,46 @@ class CustomBottombar extends StatelessWidget {
           border: Border(top: BorderSide(color: Color(0xFF2C2C2E), width: 0.5)),
         ),
         child: IgnorePointer(
-          child: Row(
-            children: List.generate(items.length, (i) {
-              final selected = i == activeIndex;
-              final item = items[i];
+          child: Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Row(
+              children: List.generate(items.length, (i) {
+                final selected = i == activeIndex;
+                final item = items[i];
 
-              return Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    if (item.iconPath != null)
-                      SvgPicture.asset(
-                        item.iconPath!,
-                        width: 26,
-                        height: 26,
-                        color: selected ? active : inactive,
-                      )
-                    else
-                      Icon(
-                        item.iconData,
-                        size: 26,
-                        color: selected ? active : inactive,
+                return Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      if (item.iconPath != null)
+                        SvgPicture.asset(
+                          item.iconPath!,
+                          width: 30,
+                          height: 30,
+                          color: selected ? active : inactive,
+                        )
+                      else
+                        Icon(
+                          item.iconData,
+                          size: 30,
+                          color: selected ? active : inactive,
+                        ),
+                      const SizedBox(height: 4),
+                      Text(
+                        item.label,
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: selected
+                              ? FontWeight.w600
+                              : FontWeight.w400,
+                          color: selected ? active : inactive,
+                        ),
                       ),
-                    const SizedBox(height: 4),
-                    Text(
-                      item.label,
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: selected
-                            ? FontWeight.w600
-                            : FontWeight.w400,
-                        color: selected ? active : inactive,
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            }),
+                    ],
+                  ),
+                );
+              }),
+            ),
           ),
         ),
       ),

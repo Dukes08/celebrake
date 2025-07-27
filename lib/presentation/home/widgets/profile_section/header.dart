@@ -9,7 +9,7 @@ class Header extends StatelessWidget {
     final double headerHeight = MediaQuery.of(context).size.height * 0.35;
 
     return SizedBox(
-      height: headerHeight,
+      height: 374,
       child: Stack(
         fit: StackFit.expand,
         children: [

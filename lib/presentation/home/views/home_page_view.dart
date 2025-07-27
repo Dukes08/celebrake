@@ -51,13 +51,26 @@ class HomePageView extends StatelessWidget {
             const SizedBox(height: 24),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: About(),
+              child: Text(
+                'Living life one goal at a time. Always ready for a match!',
+                style: TextStyle(
+                  color: Color(0xFFAEAEB2),
+                  fontSize: 19,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
             ),
             SizedBox(height: 24),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: KudosCard(),
             ),
+            const SizedBox(height: 24),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: About(),
+            ),
+
             SizedBox(height: 24),
             MainSectionsDivider(),
             Padding(

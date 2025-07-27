@@ -21,8 +21,8 @@ class ProfileStats extends StatelessWidget {
       children: [
         SvgPicture.asset(
           'lib/config/assets/flag_container.svg',
-          width: 24,
-          height: 16,
+          width: 22,
+          height: 22,
           fit: BoxFit.contain,
         ),
         const SizedBox(width: 8),
@@ -32,11 +32,11 @@ class ProfileStats extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontSize: 14),
         ),
 
-        SizedBox(width: 5),
+        SizedBox(width: 1),
 
         divider(),
 
-        SizedBox(width: 5),
+        SizedBox(width: 1),
 
         SvgPicture.asset(
           'lib/config/assets/futbol_icon.svg',
@@ -47,11 +47,11 @@ class ProfileStats extends StatelessWidget {
         SizedBox(width: 5),
         const Text('DEF', style: TextStyle(color: Colors.white, fontSize: 14)),
 
-        SizedBox(width: 5),
+        SizedBox(width: 1),
 
         divider(),
 
-        SizedBox(width: 5),
+        SizedBox(width: 1),
 
         RichText(
           text: const TextSpan(
